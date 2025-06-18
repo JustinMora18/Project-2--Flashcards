@@ -22,25 +22,48 @@ function App() {
 
   return (
       <div className='app'>
-        <h1>The Ultimate Programming Brain!</h1>
-        
-        <p className='description'>How well do you know your programming fundamentals? Test your dev knowledge with these flashcards!</p>
+        <div className='content'>
+          <h1>THE ULTIMATE<br />PROGRAMMING<br />BRAIN!</h1>
 
-        <p className="card-count">CARDS: {flashcards.length}</p>
+          <p className='description'>How well do you know your programming fundamentals? Test your dev knowledge with these flashcards!</p>
 
-        <Flashcard 
-        question={currentCard.question}
-        answer={currentCard.answer}
-        difficulty={currentCard.difficulty}
-        />
+          <p className={`card-count ${currentCard.difficulty}`}>CARDS: {flashcards.length}</p>
+        </div>
 
-        <div className="navigation">
-          <button onClick={goToPrevCard} disabled={currentIndex === 0}>
+        <div className="flashcard-wrapper">
+          <button 
+            onClick={goToPrevCard} 
+            disabled={currentIndex === 0}
+            className={`nav-btn left ${currentCard.difficulty}`}
+            >
             <span className="material-symbols-outlined">arrow_left</span>
           </button>
-          <button onClick={goToNextCard} disabled={currentIndex === flashcards.length - 1}>
+          
+          <Flashcard 
+            question={currentCard.question}
+            answer={currentCard.answer}
+            difficulty={currentCard.difficulty}
+          />
+        
+          <button 
+            onClick={goToNextCard} 
+            disabled={currentIndex === flashcards.length - 1}
+            className={`nav-btn right ${currentCard.difficulty}`}
+            >
             <span className="material-symbols-outlined">arrow_right</span>
           </button>
+        </div>
+
+        <div className="legend">
+          <div className="legend-item">
+            <span className="color-box easy"></span> easy
+          </div>
+          <div className="legend-item">
+            <span className="color-box medium"></span> medium
+          </div>
+          <div className="legend-item">
+            <span className="color-box hard"></span> hard
+          </div>
         </div>
       </div>
   );

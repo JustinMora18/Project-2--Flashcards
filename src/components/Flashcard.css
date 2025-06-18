@@ -1,1 +1,55 @@
-/* flashcard styles only */
+.flashcard {
+    width: clamp(250px, 90vw, 1400px);
+    height: clamp(400px, 60vh, 800px);
+    perspective: 1000px;
+    cursor: pointer;
+
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.flashcard-front,
+.flashcard-back{
+    width: 100%;
+    height: 100%;
+    padding: clamp(1rem, 5vw, 3rem);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--fs-medium);
+    color: var(--clr-font);
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.6s ease, background-color 0.5s ease, border-color 0.5s ease;
+}
+
+.flashcard.flipped {
+    transform: rotateX(180deg);
+}
+
+.flashcard-back {
+    transform: rotateX(180deg);
+}
+
+.card-easy .flashcard-front,
+.card-easy .flashcard-back {
+    background-color: var(--color-easy);
+    border-bottom: 1rem solid var(--color-easy-brdr);
+}
+
+.card-medium .flashcard-front,
+.card-medium .flashcard-back {
+    background-color: var(--color-medium);
+    border-bottom: 1rem solid var(--color-medium-brdr);
+}
+
+.card-hard .flashcard-front,
+.card-hard .flashcard-back{
+    background-color: var(--color-hard);
+    border-bottom: 1rem solid var(--color-hard-brdr);
+}

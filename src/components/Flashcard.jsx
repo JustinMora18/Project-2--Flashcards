@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Flashcard.css'; // si ya tienes este archivo creado
+import './Flashcard.css';
 
 function Flashcard({ question, answer, difficulty }) {
     const [flipped, setFlipped] = useState(false);
@@ -19,7 +19,12 @@ function Flashcard({ question, answer, difficulty }) {
             className={`flashcard ${cardColor} ${flipped ? 'flipped' : ''}`}
             onClick={handleClick}
         >
-            <p>{flipped ? answer : question}</p>
+            <div className="flashcard-front">
+                <p>{question}</p>
+            </div>
+            <div className="flashcard-back">
+                <p>{answer}</p>
+            </div>
         </div>
     );
 }
