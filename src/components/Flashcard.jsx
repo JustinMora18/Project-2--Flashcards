@@ -5,7 +5,7 @@ function Flashcard({ question, answer, difficulty }) {
     const [flipped, setFlipped] = useState(false);
 
     const handleClick = () => {
-    setFlipped(!flipped);
+        setFlipped(!flipped);
     };
 
     const cardColor = {
@@ -23,7 +23,7 @@ function Flashcard({ question, answer, difficulty }) {
                 <p>{question}</p>
             </div>
             <div className="flashcard-back">
-                <p>{answer}</p>
+                <p dangerouslySetInnerHTML={{ __html: answer }} />
             </div>
         </div>
     );
