@@ -56,13 +56,13 @@ function App() {
 
         <div className="legend">
           <div className="legend-item">
-            <span className="color-box easy"></span> easy
+            <span className="color-box easy"></span> Easy
           </div>
           <div className="legend-item">
-            <span className="color-box medium"></span> medium
+            <span className="color-box medium"></span> Medium
           </div>
           <div className="legend-item">
-            <span className="color-box hard"></span> hard
+            <span className="color-box hard"></span> Hard
           </div>
         </div>
       </div>

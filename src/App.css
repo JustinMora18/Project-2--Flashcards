@@ -54,6 +54,7 @@ html, body {
 
 h1 {
     font-size: var(--fs-large);
+    font-weight:900;
     color: var(--clr-font-main);
     line-height: 2.5rem;
 }
