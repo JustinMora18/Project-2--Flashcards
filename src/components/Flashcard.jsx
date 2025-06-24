@@ -15,7 +15,7 @@ function Flashcard({ question, answer, difficulty }) {
     }[difficulty];
 
     return (
-        <div 
+        <div
             className={`flashcard ${cardColor} ${flipped ? 'flipped' : ''}`}
             onClick={handleClick}
         >

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css'
 import {flashcards} from './data/flashcards';
 import Flashcard from './components/Flashcard';
+import GuessBox from './components/GuessBox';
 
 function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -44,7 +45,7 @@ function App() {
             answer={currentCard.answer}
             difficulty={currentCard.difficulty}
           />
-        
+          
           <button 
             onClick={goToNextCard} 
             disabled={currentIndex === flashcards.length - 1}
@@ -52,6 +53,10 @@ function App() {
             >
             <span className="material-symbols-outlined">arrow_right</span>
           </button>
+        </div>
+        
+        <div className='GuessBox-container'>
+          <GuessBox answer={currentCard.answer} />
         </div>
 
         <div className="legend">
