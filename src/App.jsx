@@ -28,7 +28,10 @@ function App() {
 
           <p className='description'>How well do you know your programming fundamentals? Test your dev knowledge with these flashcards!</p>
 
-          <p className={`card-count ${currentCard.difficulty}`}>CARDS: {flashcards.length}</p>
+          <p className={`card-count ${currentCard.difficulty}`}>
+          Cards: {currentIndex + 1}/{flashcards.length}
+          </p>
+
         </div>
 
         <div className="flashcard-wrapper">
