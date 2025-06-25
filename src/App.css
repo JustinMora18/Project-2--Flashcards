@@ -124,7 +124,8 @@ h1 {
 
 .legend {
     display: flex;
-    margin-top: 10%;
+    position: fixed;
+    bottom: 3%;
     gap: 3rem;
     font-size: var(--fs-medium);
     color: var(--clr-font);

@@ -54,9 +54,12 @@ function App() {
             <span className="material-symbols-outlined">arrow_right</span>
           </button>
         </div>
-        
+
         <div className='GuessBox-container'>
-          <GuessBox answer={currentCard.answer} />
+          <GuessBox 
+          answer={currentCard.answer}
+          difficulty={currentCard.difficulty}
+          />
         </div>
 
         <div className="legend">

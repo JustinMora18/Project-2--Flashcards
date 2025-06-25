@@ -47,6 +47,6 @@ export const flashcards = [
     {
         question: "What is the default port for HTTP?",
         answer: "80",
-        difficulty: "medium"
+        difficulty: "hard"
     }
 ];

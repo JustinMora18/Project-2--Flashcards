@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './GuessBox.css';
 
-function GuessBox({ answer }) {
+function GuessBox({ answer, difficulty }) {
     const [userAnswer, setUserAnswer] = useState('');
     const [isCorrect, setIsCorrect] = useState(null);
 
     const checkAnswer = ()=> {
         const cleanedUserAnswer = userAnswer.trim().toLowerCase();
-        const cleanedCorrectAnswer = answer.trim().toLowerCase().replace(/[^a-z0-9]/gi, '');
+        const cleanedCorrectAnswer = answer.trim().toLowerCase();
 
         const isAnswerCorrect = cleanedUserAnswer == cleanedCorrectAnswer;
         setIsCorrect(isAnswerCorrect);
@@ -23,7 +23,7 @@ function GuessBox({ answer }) {
     return (
         <>
             <div className="guess-box">
-                <label>Guess your answer here:</label>
+                <p className={`guessLabel ${difficulty}`}>Guess your answer here: </p>
                 <div className='inputNBtnContainer'>
                     <input
                         type="text"

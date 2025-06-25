@@ -1,0 +1,84 @@
+.GuessBox-container{
+    margin: 2rem;
+}
+
+.inputNBtnContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.guess-box {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.guess-box p{
+    margin: 0 0 2rem 0;
+    font-size: var(--fs-medium);
+}
+
+.guess-box input {
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    border: none;
+    border-bottom: 15px solid #9b9696;
+    width: 40rem;
+    height: 4rem;
+    font-size: var(--fs-medium);
+    font-family: var(--font-main);
+}
+
+.guess-box button {
+    width: 12rem;
+    font-family: 'Poppins','Sora', sans-serif;
+    font-size: var(--fs-medium);
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    border-bottom: 15px solid #9b9696;
+    background-color: var(--clr-font);
+    color: black;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.inputNBtnContainer {
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.result-text{
+    margin-top: 10rem;
+    font-size: var(--fs-medium);
+    font-weight: bold;
+}
+
+.result-text.correct {
+    color: var(--clr-font-main);
+}
+
+.result-text.incorrect {
+    color: #f64141;
+}
+
+body.correct-border {
+    border: 4px solid var(--clr-font-main);
+}
+
+body.incorrect-border {
+    border: 4px solid red;
+}
+
+.easy {
+    color: var(--color-easy);
+}
+
+.medium {
+    color: var(--color-medium);
+}
+
+.hard {
+    color: var(--color-hard); 
+}
