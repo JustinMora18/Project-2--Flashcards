@@ -24,6 +24,20 @@ Time spent: **13** hours spent in total
   - [x] Clicking on a flipped card again flips it back, showing the front
 - [ ] **Clicking on the next button displays a random new card**
 
+### Part 2
+
+The following **required** functionality is completed:
+
+- [x] **The user can enter their guess into an input box *before* seeing the flipside of the card**
+  - Application features a clearly labeled input box with a submit button where users can type in a guess
+  - Clicking on the submit button with an **incorrect** answer shows visual feedback that it is wrong 
+  -  Clicking on the submit button with a **correct** answer shows visual feedback that it is correct
+- [x] **The user can navigate through an ordered list of cardss**
+  - A forward/next button displayed on the card navigates to the next card in a set sequence when clicked
+  - A previous/back button displayed on the card returns to the previous card in the set sequence when clicked
+  - Both the next and back buttons should have some visual indication that the user is at the beginning or end of the list (for example, graying out and no longer being available to click), not allowing for wrap-around navigation
+
+
 The following **optional** features are implemented:
 
 - [x] Cards contain images in addition to or in place of text
@@ -38,12 +52,19 @@ The following **additional** features are implemented:
 - [x] Smooth animations for flipping cards (3D transitions or effects)
   - [x] Dynamic color changes for card background and text based on difficulty or category
 
+part 2
+- [x] Added a dynamic card counter to clearly show the user's current position within the flashcard set.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
 
-<img src='Flashcards-Video-Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='Flashcards-Video-Walkthrough.gif' title='Video Walkthrough' width='500px' alt='Video Walkthrough' />
+
+Here's a walkthrough of implemented required features of part 2:
+
+<img src='Flashcards-Video-Walkthrough-part2.gif' title='Video Walkthrough' width='500px' alt='Video Walkthrough' />
+
 
 GIF created with
 [Kap](https://getkap.co/) for macOS
@@ -57,6 +78,11 @@ Describe any challenges encountered while building the app.
 - [ ] Making the layout fully responsive
       Getting the flashcards to scale well on smaller screens took some trial and error with clamp() and percentages.
 
+Part 2
+- [ ] Synchronizing input and feedback
+      Managing the timing between submitting a guess and showing whether it was right or wrong 
+- [ ] Handling answer comparison logic
+      Making the app compare the user's guess to the correct answer
 ## License
 
     Copyright [2025] [Justin Mora]
